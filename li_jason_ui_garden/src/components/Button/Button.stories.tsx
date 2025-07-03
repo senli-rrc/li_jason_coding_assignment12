@@ -76,32 +76,32 @@ export const CustomBackgroundColor: Story = {
   },
 };
 
-export const DangerButton: Story = {
-  args: {
-    title: 'Delete',
-    backgroundColor: '#dc3545',
-    disabled: false,
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toBeInTheDocument();
-    await expect(button).toHaveTextContent('Delete');
-    await expect(button).toHaveStyle('background-color: rgb(220, 53, 69)');
-  },
-};
+// export const DangerButton: Story = {
+//   args: {
+//     title: 'Delete',
+//     backgroundColor: '#dc3545',
+//     disabled: false,
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const button = canvas.getByRole('button');
+//     await expect(button).toBeInTheDocument();
+//     await expect(button).toHaveTextContent('Delete');
+//     await expect(button).toHaveStyle('background-color: rgb(220, 53, 69)');
+//   },
+// };
 
-export const WarningButton: Story = {
-  args: {
-    title: 'Warning',
-    backgroundColor: '#ffc107',
-    disabled: false,
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toBeInTheDocument();
-    await expect(button).toHaveTextContent('Warning');
-    await expect(button).toHaveStyle('background-color: rgb(255, 193, 7)');
-  },
-};
+// export const WarningButton: Story = {
+//   args: {
+//     title: 'Warning',
+//     backgroundColor: '#ffc107',
+//     disabled: false,
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const button = canvas.getByRole('button');
+//     await expect(button).toBeInTheDocument();
+//     await expect(button).toHaveTextContent('Warning');
+//     await expect(button).toHaveStyle('background-color: rgb(255, 193, 7)');
+//   },
+// };

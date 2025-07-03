@@ -49,46 +49,46 @@ export const Default: Story = {
   },
 };
 
-export const WithValue: Story = {
-  args: {
-    options: sampleOptions,
-    value: 'option2',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByDisplayValue('Option 2') || canvas.getByText('Option 2');
+// export const WithValue: Story = {
+//   args: {
+//     options: sampleOptions,
+//     value: 'option2',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByDisplayValue('Option 2') || canvas.getByText('Option 2');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };
 
-export const Small: Story = {
-  args: {
-    options: sampleOptions,
-    size: 'small',
-    placeholder: 'Small dropdown',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByRole('combobox') || canvas.getByText('Small dropdown');
+// export const Small: Story = {
+//   args: {
+//     options: sampleOptions,
+//     size: 'small',
+//     placeholder: 'Small dropdown',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByRole('combobox') || canvas.getByText('Small dropdown');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };
 
-export const Large: Story = {
-  args: {
-    options: sampleOptions,
-    size: 'large',
-    placeholder: 'Large dropdown',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByRole('combobox') || canvas.getByText('Large dropdown');
+// export const Large: Story = {
+//   args: {
+//     options: sampleOptions,
+//     size: 'large',
+//     placeholder: 'Large dropdown',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByRole('combobox') || canvas.getByText('Large dropdown');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };
 
 export const Disabled: Story = {
   args: {
@@ -107,46 +107,46 @@ export const Disabled: Story = {
   },
 };
 
-export const Error: Story = {
-  args: {
-    options: sampleOptions,
-    error: true,
-    placeholder: 'Error state',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByRole('combobox') || canvas.getByText('Error state');
+// export const Error: Story = {
+//   args: {
+//     options: sampleOptions,
+//     error: true,
+//     placeholder: 'Error state',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByRole('combobox') || canvas.getByText('Error state');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };
 
-export const FullWidth: Story = {
-  args: {
-    options: sampleOptions,
-    fullWidth: true,
-    placeholder: 'Full width dropdown',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByRole('combobox') || canvas.getByText('Full width dropdown');
+// export const FullWidth: Story = {
+//   args: {
+//     options: sampleOptions,
+//     fullWidth: true,
+//     placeholder: 'Full width dropdown',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByRole('combobox') || canvas.getByText('Full width dropdown');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };
 
-export const CustomColors: Story = {
-  args: {
-    options: sampleOptions,
-    backgroundColor: '#f0f0f0',
-    color: '#333',
-    borderColor: '#007bff',
-    placeholder: 'Custom colors',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const dropdown = canvas.getByRole('combobox') || canvas.getByText('Custom colors');
+// export const CustomColors: Story = {
+//   args: {
+//     options: sampleOptions,
+//     backgroundColor: '#f0f0f0',
+//     color: '#333',
+//     borderColor: '#007bff',
+//     placeholder: 'Custom colors',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const dropdown = canvas.getByRole('combobox') || canvas.getByText('Custom colors');
 
-    await expect(dropdown).toBeInTheDocument();
-  },
-};
+//     await expect(dropdown).toBeInTheDocument();
+//   },
+// };

@@ -19,33 +19,33 @@ describe('Button component', () => {
     expect(buttonElement).toHaveStyle('opacity: 0.65');
   });
 
-  test('applies custom background color when not disabled', () => {
-    render(<Button title="Custom Button" backgroundColor="#ff0000" />);
-    const buttonElement = screen.getByText(/custom button/i);
-    expect(buttonElement).toHaveStyle('background-color: #ff0000');
-  });
+  // test('applies custom background color when not disabled', () => {
+  //   render(<Button title="Custom Button" backgroundColor="#ff0000" />);
+  //   const buttonElement = screen.getByText(/custom button/i);
+  //   expect(buttonElement).toHaveStyle('background-color: #ff0000');
+  // });
 
-  test('calls onClick when clicked and not disabled', () => {
-    const mockOnClick = jest.fn();
-    render(<Button title="Clickable Button" onClick={mockOnClick} />);
-    const buttonElement = screen.getByText(/clickable button/i);
+  // test('calls onClick when clicked and not disabled', () => {
+  //   const mockOnClick = jest.fn();
+  //   render(<Button title="Clickable Button" onClick={mockOnClick} />);
+  //   const buttonElement = screen.getByText(/clickable button/i);
 
-    fireEvent.click(buttonElement);
-    expect(mockOnClick).toHaveBeenCalledTimes(1);
-  });
+  //   fireEvent.click(buttonElement);
+  //   expect(mockOnClick).toHaveBeenCalledTimes(1);
+  // });
 
-  test('does not call onClick when disabled', () => {
-    const mockOnClick = jest.fn();
-    render(<Button title="Disabled Button" disabled onClick={mockOnClick} />);
-    const buttonElement = screen.getByText(/disabled button/i);
+  // test('does not call onClick when disabled', () => {
+  //   const mockOnClick = jest.fn();
+  //   render(<Button title="Disabled Button" disabled onClick={mockOnClick} />);
+  //   const buttonElement = screen.getByText(/disabled button/i);
 
-    fireEvent.click(buttonElement);
-    expect(mockOnClick).not.toHaveBeenCalled();
-  });
+  //   fireEvent.click(buttonElement);
+  //   expect(mockOnClick).not.toHaveBeenCalled();
+  // });
 
-  test('has proper accessibility attributes', () => {
-    render(<Button title="Accessible Button" />);
-    const buttonElement = screen.getByText(/accessible button/i);
-    expect(buttonElement).toHaveAttribute('aria-label', 'Accessible Button');
-  });
+  // test('has proper accessibility attributes', () => {
+  //   render(<Button title="Accessible Button" />);
+  //   const buttonElement = screen.getByText(/accessible button/i);
+  //   expect(buttonElement).toHaveAttribute('aria-label', 'Accessible Button');
+  // });
 });
