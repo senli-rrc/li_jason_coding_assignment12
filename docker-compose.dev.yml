@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    container_name: li_jason_coding_assignment12
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./li_jason_ui_garden/src:/li_jason_ui_garden/src
+    restart: unless-stopped
