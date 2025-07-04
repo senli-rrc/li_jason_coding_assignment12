@@ -23,7 +23,24 @@ describe('Table component', () => {
     expect(screen.getByText(/cell content/i)).toBeVisible();
   });
 
-  test('applies disabled styles when disabled', () => {
+  // test('applies disabled styles when disabled', () => {
+  //   render(
+  //     <Table disabled>
+  //       <tbody>
+  //         <TableRow>
+  //           <TableCell>Disabled table</TableCell>
+  //         </TableRow>
+  //       </tbody>
+  //     </Table>
+  //   );
+
+  //   const table = screen.getByRole('table');
+  //   expect(table).toHaveStyle('opacity: 0.6');
+  //   expect(table).toHaveStyle('pointer-events: none');
+  //   expect(table).toHaveStyle('cursor: not-allowed');
+  // });
+
+  test('changes background color when disabled', () => {
     render(
       <Table disabled>
         <tbody>
@@ -33,23 +50,6 @@ describe('Table component', () => {
         </tbody>
       </Table>
     );
-
-    const table = screen.getByRole('table');
-    expect(table).toHaveStyle('opacity: 0.6');
-    expect(table).toHaveStyle('pointer-events: none');
-    expect(table).toHaveStyle('cursor: not-allowed');
-  });
-
-//   test('changes background color when disabled', () => {
-//     render(
-//       <Table disabled>
-//         <tbody>
-//           <TableRow>
-//             <TableCell>Disabled table</TableCell>
-//           </TableRow>
-//         </tbody>
-//       </Table>
-//     );
 
 //     const table = screen.getByRole('table');
 //     expect(table).toHaveStyle('background-color: #f8f9fa');

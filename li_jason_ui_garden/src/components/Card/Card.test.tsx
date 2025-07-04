@@ -28,7 +28,7 @@ describe('Card', () => {
     );
 
     const card = screen.getByText('Disabled Card').closest('div');
-    expect(card).toHaveStyle('background-color: #6c757d');
+    expect(card).toHaveStyle('background-color:rgb(108, 117, 125');
     expect(card).toHaveStyle('opacity: 0.6');
     expect(card).toHaveStyle('cursor: not-allowed');
   });

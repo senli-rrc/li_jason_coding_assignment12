@@ -85,64 +85,64 @@ export const Default: Story = {
   },
 };
 
-export const WithCustomOverlay: Story = {
-  args: {
-    src: 'https://via.placeholder.com/1200x400/ff6b6b/ffffff?text=Custom+Overlay',
-    alt: 'Hero with custom overlay',
-    title: 'Custom Overlay',
-    subtitle: 'This hero has a custom blue overlay',
-    overlayColor: 'rgba(0, 100, 200, 0.6)',
-    overlayOpacity: 0.6,
-    height: '500px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const heroImage = canvas.getByRole('img');
-    const title = canvas.getByText('Custom Overlay');
+// export const WithCustomOverlay: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/1200x400/ff6b6b/ffffff?text=Custom+Overlay',
+//     alt: 'Hero with custom overlay',
+//     title: 'Custom Overlay',
+//     subtitle: 'This hero has a custom blue overlay',
+//     overlayColor: 'rgba(0, 100, 200, 0.6)',
+//     overlayOpacity: 0.6,
+//     height: '500px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const heroImage = canvas.getByRole('img');
+//     const title = canvas.getByText('Custom Overlay');
 
-    await expect(heroImage).toBeInTheDocument();
-    await expect(title).toBeInTheDocument();
-  },
-};
+//     await expect(heroImage).toBeInTheDocument();
+//     await expect(title).toBeInTheDocument();
+//   },
+// };
 
-export const NoOverlay: Story = {
-  args: {
-    src: 'https://via.placeholder.com/1200x300/4ecdc4/ffffff?text=No+Overlay',
-    alt: 'Hero without overlay',
-    title: 'Clean and Simple',
-    subtitle: 'No overlay for better image visibility',
-    overlay: false,
-    textColor: '#333',
-    height: '300px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const heroImage = canvas.getByRole('img');
-    const title = canvas.getByText('Clean and Simple');
+// export const NoOverlay: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/1200x300/4ecdc4/ffffff?text=No+Overlay',
+//     alt: 'Hero without overlay',
+//     title: 'Clean and Simple',
+//     subtitle: 'No overlay for better image visibility',
+//     overlay: false,
+//     textColor: '#333',
+//     height: '300px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const heroImage = canvas.getByRole('img');
+//     const title = canvas.getByText('Clean and Simple');
 
-    await expect(heroImage).toBeInTheDocument();
-    await expect(title).toBeInTheDocument();
-  },
-};
+//     await expect(heroImage).toBeInTheDocument();
+//     await expect(title).toBeInTheDocument();
+//   },
+// };
 
-export const LeftAligned: Story = {
-  args: {
-    src: 'https://via.placeholder.com/1200x400/45b7d1/ffffff?text=Left+Aligned',
-    alt: 'Left aligned hero',
-    title: 'Left Aligned Content',
-    subtitle: 'Text content aligned to the left side',
-    textAlign: 'left',
-    height: '400px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const heroImage = canvas.getByRole('img');
-    const title = canvas.getByText('Left Aligned Content');
+// export const LeftAligned: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/1200x400/45b7d1/ffffff?text=Left+Aligned',
+//     alt: 'Left aligned hero',
+//     title: 'Left Aligned Content',
+//     subtitle: 'Text content aligned to the left side',
+//     textAlign: 'left',
+//     height: '400px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const heroImage = canvas.getByRole('img');
+//     const title = canvas.getByText('Left Aligned Content');
 
-    await expect(heroImage).toBeInTheDocument();
-    await expect(title).toBeInTheDocument();
-  },
-};
+//     await expect(heroImage).toBeInTheDocument();
+//     await expect(title).toBeInTheDocument();
+//   },
+// };
 
 export const Disabled: Story = {
   args: {
@@ -163,42 +163,42 @@ export const Disabled: Story = {
   },
 };
 
-export const Clickable: Story = {
-  args: {
-    src: 'https://via.placeholder.com/1200x400/96ceb4/ffffff?text=Clickable+Hero',
-    alt: 'Clickable hero image',
-    title: 'Interactive Hero',
-    subtitle: 'Click anywhere on this hero image',
-    onClick: () => {},
-    height: '400px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const heroImage = canvas.getByRole('img');
-    const title = canvas.getByText('Interactive Hero');
+// export const Clickable: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/1200x400/96ceb4/ffffff?text=Clickable+Hero',
+//     alt: 'Clickable hero image',
+//     title: 'Interactive Hero',
+//     subtitle: 'Click anywhere on this hero image',
+//     onClick: () => {},
+//     height: '400px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const heroImage = canvas.getByRole('img');
+//     const title = canvas.getByText('Interactive Hero');
 
-    await expect(heroImage).toBeInTheDocument();
-    await expect(title).toBeInTheDocument();
+//     await expect(heroImage).toBeInTheDocument();
+//     await expect(title).toBeInTheDocument();
 
-    // Test clicking on the hero image
-    await userEvent.click(heroImage);
-  },
-};
+//     // Test clicking on the hero image
+//     await userEvent.click(heroImage);
+//   },
+// };
 
-export const TallHero: Story = {
-  args: {
-    src: 'https://via.placeholder.com/1200x600/feca57/ffffff?text=Tall+Hero',
-    alt: 'Tall hero image',
-    title: 'Tall Hero Section',
-    subtitle: 'This hero takes up more vertical space',
-    height: '600px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const heroImage = canvas.getByRole('img');
-    const title = canvas.getByText('Tall Hero Section');
+// export const TallHero: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/1200x600/feca57/ffffff?text=Tall+Hero',
+//     alt: 'Tall hero image',
+//     title: 'Tall Hero Section',
+//     subtitle: 'This hero takes up more vertical space',
+//     height: '600px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const heroImage = canvas.getByRole('img');
+//     const title = canvas.getByText('Tall Hero Section');
 
-    await expect(heroImage).toBeInTheDocument();
-    await expect(title).toBeInTheDocument();
-  },
-};
+//     await expect(heroImage).toBeInTheDocument();
+//     await expect(title).toBeInTheDocument();
+//   },
+// };

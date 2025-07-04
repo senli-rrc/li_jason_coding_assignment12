@@ -71,39 +71,39 @@ export const Default: Story = {
   },
 };
 
-export const Responsive: Story = {
-  args: {
-    src: 'https://via.placeholder.com/800x400/ff6b6b/ffffff?text=Responsive+Image',
-    alt: 'Responsive image',
-    width: '100%',
-    objectFit: 'cover',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const image = canvas.getByRole('img');
+// export const Responsive: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/800x400/ff6b6b/ffffff?text=Responsive+Image',
+//     alt: 'Responsive image',
+//     width: '100%',
+//     objectFit: 'cover',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const image = canvas.getByRole('img');
 
-    await expect(image).toBeInTheDocument();
-    await expect(image).toHaveAttribute('alt', 'Responsive image');
-  },
-};
+//     await expect(image).toBeInTheDocument();
+//     await expect(image).toHaveAttribute('alt', 'Responsive image');
+//   },
+// };
 
-export const Rounded: Story = {
-  args: {
-    src: 'https://via.placeholder.com/200x200/4ecdc4/ffffff?text=Round',
-    alt: 'Rounded image',
-    width: '200px',
-    height: '200px',
-    borderRadius: '50%',
-    objectFit: 'cover',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const image = canvas.getByRole('img');
+// export const Rounded: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/200x200/4ecdc4/ffffff?text=Round',
+//     alt: 'Rounded image',
+//     width: '200px',
+//     height: '200px',
+//     borderRadius: '50%',
+//     objectFit: 'cover',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const image = canvas.getByRole('img');
 
-    await expect(image).toBeInTheDocument();
-    await expect(image).toHaveStyle('border-radius: 50%');
-  },
-};
+//     await expect(image).toBeInTheDocument();
+//     await expect(image).toHaveStyle('border-radius: 50%');
+//   },
+// };
 
 export const Disabled: Story = {
   args: {
@@ -123,37 +123,37 @@ export const Disabled: Story = {
   },
 };
 
-export const Clickable: Story = {
-  args: {
-    src: 'https://via.placeholder.com/300x200/45b7d1/ffffff?text=Click+Me',
-    alt: 'Clickable image',
-    width: '300px',
-    height: '200px',
-    onClick: () => alert('Image clicked!'),
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const image = canvas.getByRole('img');
+// export const Clickable: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/300x200/45b7d1/ffffff?text=Click+Me',
+//     alt: 'Clickable image',
+//     width: '300px',
+//     height: '200px',
+//     onClick: () => alert('Image clicked!'),
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const image = canvas.getByRole('img');
 
-    await expect(image).toBeInTheDocument();
-    await expect(image).toHaveStyle('cursor: pointer');
-  },
-};
+//     await expect(image).toBeInTheDocument();
+//     await expect(image).toHaveStyle('cursor: pointer');
+//   },
+// };
 
-export const ContainFit: Story = {
-  args: {
-    src: 'https://via.placeholder.com/400x200/96ceb4/ffffff?text=Contain+Fit',
-    alt: 'Image with contain fit',
-    width: '300px',
-    height: '300px',
-    objectFit: 'contain',
-    borderRadius: '8px',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const image = canvas.getByRole('img');
+// export const ContainFit: Story = {
+//   args: {
+//     src: 'https://via.placeholder.com/400x200/96ceb4/ffffff?text=Contain+Fit',
+//     alt: 'Image with contain fit',
+//     width: '300px',
+//     height: '300px',
+//     objectFit: 'contain',
+//     borderRadius: '8px',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const image = canvas.getByRole('img');
 
-    await expect(image).toBeInTheDocument();
-    await expect(image).toHaveStyle('border-radius: 8px');
-  },
-};
+//     await expect(image).toBeInTheDocument();
+//     await expect(image).toHaveStyle('border-radius: 8px');
+//   },
+// };

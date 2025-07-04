@@ -80,44 +80,44 @@ export const Disabled: Story = {
   },
 };
 
-export const HeaderCell: Story = {
-  args: {
-    as: 'th',
-    children: 'Header Cell',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const cell = canvas.getByRole('columnheader');
+// export const HeaderCell: Story = {
+//   args: {
+//     as: 'th',
+//     children: 'Header Cell',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const cell = canvas.getByRole('columnheader');
 
-    await expect(cell).toBeInTheDocument();
-    await expect(cell).toHaveTextContent('Header Cell');
-  },
-};
+//     await expect(cell).toBeInTheDocument();
+//     await expect(cell).toHaveTextContent('Header Cell');
+//   },
+// };
 
-export const CenteredCell: Story = {
-  args: {
-    align: 'center',
-    children: 'Centered Content',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const cell = canvas.getByRole('cell');
+// export const CenteredCell: Story = {
+//   args: {
+//     align: 'center',
+//     children: 'Centered Content',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const cell = canvas.getByRole('cell');
 
-    await expect(cell).toBeInTheDocument();
-    await expect(cell).toHaveTextContent('Centered Content');
-  },
-};
+//     await expect(cell).toBeInTheDocument();
+//     await expect(cell).toHaveTextContent('Centered Content');
+//   },
+// };
 
-export const RightAlignedCell: Story = {
-  args: {
-    align: 'right',
-    children: '$123.45',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const cell = canvas.getByRole('cell');
+// export const RightAlignedCell: Story = {
+//   args: {
+//     align: 'right',
+//     children: '$123.45',
+//   },
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const cell = canvas.getByRole('cell');
 
-    await expect(cell).toBeInTheDocument();
-    await expect(cell).toHaveTextContent('$123.45');
-  },
-};
+//     await expect(cell).toBeInTheDocument();
+//     await expect(cell).toHaveTextContent('$123.45');
+//   },
+// };

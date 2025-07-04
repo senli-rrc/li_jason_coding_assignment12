@@ -6,7 +6,7 @@ This project is a comprehensive UI component library built with React, TypeScrip
 
 ### Prerequisites
 
-- Node.js 18 or higher
+- Node.js 20 or higher
 - Docker and Docker Compose
 
 ### Local Development
