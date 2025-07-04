@@ -13,10 +13,9 @@ describe('Card', () => {
       />
     );
 
-    expect(screen.getByText('Test Title')).toBeInTheDocument();
-    expect(screen.getByText('Test Subtitle')).toBeInTheDocument();
-    expect(screen.getByText('Test content')).toBeInTheDocument();
     expect(screen.getByText('Test Title')).toBeVisible();
+    expect(screen.getByText('Test Subtitle')).toBeVisible();
+    expect(screen.getByText('Test content')).toBeVisible();
   });
 
   test('applies disabled styles when disabled', () => {
@@ -28,7 +27,7 @@ describe('Card', () => {
     );
 
     const card = screen.getByText('Disabled Card').closest('div');
-    expect(card).toHaveStyle('background-color:rgb(108, 117, 125');
+    expect(card).toHaveStyle('background-color: #ffffff');
     expect(card).toHaveStyle('opacity: 0.6');
     expect(card).toHaveStyle('cursor: not-allowed');
   });

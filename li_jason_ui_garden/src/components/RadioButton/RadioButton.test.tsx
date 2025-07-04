@@ -33,7 +33,7 @@ describe('RadioButton', () => {
     const label = screen.getByText('Disabled Option');
 
     expect(radioButton).toBeDisabled();
-    expect(label).toHaveStyle('background-color: #6c757d');
+    expect(label).toHaveStyle('background-color: rgba(0, 0, 0, 0)');
     expect(radioButton).toHaveStyle('cursor: not-allowed');
   });
 

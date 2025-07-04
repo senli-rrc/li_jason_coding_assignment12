@@ -51,9 +51,9 @@ describe('Table component', () => {
       </Table>
     );
 
-//     const table = screen.getByRole('table');
-//     expect(table).toHaveStyle('background-color: #f8f9fa');
-//   });
+    const table = screen.getByRole('table');
+    expect(table).toHaveStyle('background-color: #f8f9fa');
+  });
 
 //   test('applies custom background color', () => {
 //     render(

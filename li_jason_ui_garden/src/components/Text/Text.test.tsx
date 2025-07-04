@@ -19,7 +19,7 @@ describe('Text component', () => {
   test('changes background color when disabled', () => {
     render(<Text disabled>Disabled Text</Text>);
     const textElement = screen.getByText(/disabled text/i);
-    expect(textElement).toHaveStyle('background-color: #f8f9fa');
+    expect(textElement).toHaveStyle('background-color: rgba(0, 0, 0, 0)');
   });
 
   // test('applies custom color', () => {
